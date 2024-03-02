@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/get_input_args.py
 #                                                                             
-# PROGRAMMER: 
+# PROGRAMMER: An Nguyen Ngoc
 # DATE CREATED:                                   
 # REVISED DATE: 
 # PURPOSE: Create a function that retrieves the following 3 command line inputs 
@@ -34,15 +34,23 @@ def get_input_args():
       3. Text File with Dog Names as --dogfile with default value 'dognames.txt'
     This function returns these arguments as an ArgumentParser object.
     Parameters:
-     None - simply using argparse module to create & store command line arguments
+      None - simply using argparse module to create & store command line arguments
     Returns:
-     parse_args() -data structure that stores the command line arguments object  
+      parse_args() -data structure that stores the command line arguments object  
     """
     # Create Parse using ArgumentParser
+    parser = argparse.ArgumentParser()
     
     # Create 3 command line arguments as mentioned above using add_argument() from ArguementParser method
-    
+    ## Argument 1: that's a path to a folder
+    parser.add_argument('--dir', type = str, default = 'pet_images/', 
+                    help = 'path to the folder of pet images') 
+    # TODO: 1a. EDIT parse.add_argument statements BELOW to add type & help for:
+    #          --arch - the CNN model architecture
+    #          --dogfile - text file of names of dog breeds
+    parser.add_argument('--arch', default = 'vgg' )
+    parser.add_argument('--dogfile', default = 'dognames.txt' )
     
     # Replace None with parser.parse_args() parsed argument collection that 
     # you created with this function 
-    return None
+    return parser.parse_args()
