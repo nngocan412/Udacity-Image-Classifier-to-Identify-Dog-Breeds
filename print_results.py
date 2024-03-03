@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/print_results.py
 #                                                                             
-# PROGRAMMER: 
-# DATE CREATED:
+# PROGRAMMER: An Nguyen Ngoc
+# DATE CREATED: March 3, 2024
 # REVISED DATE: 
 # PURPOSE: Create a function print_results that prints the results statistics
 #          from the results statistics dictionary (results_stats_dic). It 
