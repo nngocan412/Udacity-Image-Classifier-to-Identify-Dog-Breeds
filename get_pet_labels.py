@@ -59,10 +59,17 @@ def get_pet_labels(image_dir):
         # Creates temporary label variable to hold pet label name extracted 
         pet_label = ""
         
+        # TODO: 2a. BELOW REPLACE pass with CODE that will process each 
+        #          filename in the in_files list to extract the dog breed 
+        #          name from the filename. Recall that each filename can be
+        #          accessed by in_files[idx]. Be certain to place the 
+        #          extracted dog breed name in the variable pet_label 
+        #          that's created as an empty string ABOVE
+        
         ## Sets string to lower case letters
         low_pet_image = filenames[idx].lower()
         
-        ## Splits lower case string by _ to break into words 
+        ## Splits lower case string by _ to break into words
         word_list_pet_image = low_pet_image.split("_")
         
         ## Loops to check if word in pet name is only
@@ -74,14 +81,6 @@ def get_pet_labels(image_dir):
 
         ## Strip off starting/trailing whitespace characters 
         pet_label = pet_label.strip()
-
-        # TODO: 2a. BELOW REPLACE pass with CODE that will process each 
-        #          filename in the in_files list to extract the dog breed 
-        #          name from the filename. Recall that each filename can be
-        #          accessed by in_files[idx]. Be certain to place the 
-        #          extracted dog breed name in the variable pet_label 
-        #          that's created as an empty string ABOVE
-        pass
 
         # If filename doesn't already exist in dictionary add it and it's
         # pet label - otherwise print an error message because indicates 
